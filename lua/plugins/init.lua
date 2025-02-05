@@ -83,6 +83,9 @@ return {
       })
     end
   },
+  {
+    'tpope/vim-fugitive'
+  },
   -- {
   -- 	"nvim-treesitter/nvim-treesitter",
   -- 	opts = {
