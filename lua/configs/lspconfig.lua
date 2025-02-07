@@ -4,7 +4,13 @@ require("nvchad.configs.lspconfig").defaults()
 local lspconfig = require "lspconfig"
 
 -- EXAMPLE
-local servers = { "html", "cssls", "eslint" }
+local servers = {
+  "html",
+  "cssls",
+  "eslint",
+  "intelephense",
+  -- "phpstan",
+}
 local nvlsp = require "nvchad.configs.lspconfig"
 
 -- lsps with default config
@@ -32,7 +38,7 @@ lspconfig.ts_ls.setup {
         includeInlayParameterNameHints = 'all',
         includeInlayParameterNameHintsWhenArgumentMatchesName = false,
         includeInlayFunctionParameterTypeHints = true,
-        includeInlayVariableTypeHints = true,
+        -- includeInlayVariableTypeHints = true,
         includeInlayVariableTypeHintsWhenTypeMatchesName = false,
         includeInlayPropertyDeclarationTypeHints = true,
         includeInlayFunctionLikeReturnTypeHints = true,
