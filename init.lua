@@ -12,6 +12,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 vim.opt.listchars = { tab = '▷ ', lead = '.', trail = '·', extends = '◣', precedes = '◢', nbsp = '○' }
 vim.opt.list = true
+vim.wo.number = true
+vim.wo.relativenumber = true
 vim.g.inlay_hints_visible = true
 if vim.lsp.inlay_hint then
   vim.lsp.inlay_hint.enable(true, { 0 })
