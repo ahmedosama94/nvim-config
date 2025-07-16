@@ -112,6 +112,37 @@ return {
     ft = {"go", 'gomod'},
     build = ':lua require("go.install").update_all_sync()' -- if you need to install/update all binaries
   },
+  {
+    'nvim-tree/nvim-tree.lua',
+    opts = function (_, conf)
+      conf.git = conf.git or {
+        enable = true,
+        timeout = 500,
+      }
+      conf.git.ignore = false
+
+      return conf
+    end,
+  },
+  -- {
+  --   'https://gitlab.com/gitlab-org/editor-extensions/gitlab.vim.git',
+  --   -- Activate when a file is created/opened
+  --   event = { 'BufReadPre', 'BufNewFile' },
+  --   -- Activate when a supported filetype is open
+  --   ft = { 'go', 'javascript', 'python', 'ruby' },
+  --   cond = function()
+  --     -- Only activate if token is present in environment variable.
+  --     -- Remove this line to use the interactive workflow.
+  --     return vim.env.GITLAB_TOKEN ~= nil and vim.env.GITLAB_TOKEN ~= ''
+  --   end,
+  --   opts = {
+  --     statusline = {
+  --       -- Hook into the built-in statusline to indicate the status
+  --       -- of the GitLab Duo Code Suggestions integration
+  --       enabled = true,
+  --     },
+  --   },
+  -- },
   -- {
   -- 	'nvim-treesitter/nvim-treesitter',
   -- 	opts = {
