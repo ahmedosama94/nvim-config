@@ -10,6 +10,7 @@ local servers = {
   "eslint",
   "intelephense",
   "gopls",
+  "volar",
   -- "phpstan",
 }
 local nvlsp = require "nvchad.configs.lspconfig"
@@ -85,6 +86,15 @@ lspconfig.pyright.setup {
         useLibraryCodeForTypes = true,
         typeCheckingMode = 'off',
       },
+    },
+  },
+}
+
+lspconfig.volar.setup {
+  filetypes = { "vue" },
+  init_options = {
+    vue = {
+      hybridMode = false,
     },
   },
 }
